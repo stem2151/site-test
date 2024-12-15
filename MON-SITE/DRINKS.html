@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Cave à Alcool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body class="font-sans bg-gradient-to-r from-gray-900 to-gray-700">
+
+    <!-- Header -->
+    <header class="bg-black text-yellow-500 sticky top-0 z-20 shadow-lg">
+        <nav class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center transition-transform transform hover:scale-105 duration-300 ease-in-out">
+            <a href="#accueil" class="text-4xl font-bold text-yellow-400 hover:text-yellow-300 transform transition-all duration-300 ease-in-out" aria-label="Accueil du site">
+                <span class="text-red-600">La Cave</span> à Alcool
+            </a>
+            <ul class="flex space-x-10 text-yellow-300 font-medium">
+                <li><a href="#accueil" class="hover:text-orange-400 hover:border-b-2 hover:border-orange-400 py-2" aria-label="Accéder à la section Accueil">Accueil</a></li>
+                <li><a href="#boutiques" class="hover:text-orange-400 hover:border-b-2 hover:border-orange-400 py-2" aria-label="Accéder aux Boutiques">Nos Boutiques</a></li>
+                <li><a href="#a-propos" class="hover:text-orange-400 hover:border-b-2 hover:border-orange-400 py-2" aria-label="En savoir plus sur nous">À Propos</a></li>
+                <li><a href="#contact" class="hover:text-orange-400 hover:border-b-2 hover:border-orange-400 py-2" aria-label="Accéder à la section Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section Accueil avec image de fond -->
+    <section id="accueil" class="bg-cover bg-center h-screen relative" style="background-image: url('10 Bourbons You Can Afford to Drink Every_ Single.jpg');">
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+        <div class="relative z-10 text-center text-white py-40 px-6">
+            <h2 class="text-6xl font-bold mb-6 tracking-wide">Découvrez notre sélection d'alcools</h2>
+            <p class="text-xl mb-8 max-w-4xl mx-auto">Explorez une collection de vins, spiritueux et bières rares, méticuleusement choisis pour satisfaire les amateurs les plus exigeants.</p>
+            <a href="#boutiques" class="bg-yellow-500 hover:bg-yellow-400 text-black py-4 px-12 rounded-full text-lg font-semibold transition-all duration-300 ease-in-out shadow-lg hover:shadow-xl transform hover:scale-110">Voir nos Boutiques</a>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="a-propos" class="py-24 text-left text-gray-100">
+        <div class="flex items-center max-w-7xl mx-auto px-6 space-x-16">
+            <img src="alcool.png" alt="Image représentant des bouteilles d'alcool" class="w-1/2 h-auto rounded-lg shadow-2xl transform transition-all hover:scale-105" loading="lazy">
+            <div class="space-y-6">
+                <h3 class="text-3xl font-semibold text-yellow-400">Notre passion</h3>
+                <p class="text-xl">Notre mission est de réunir les meilleurs alcools du monde pour une expérience sensorielle unique. Que vous soyez amateur de vins raffinés, de whiskys vieillis ou de bières artisanales, nous avons quelque chose pour chaque palais exigeant. Chaque bouteille raconte une histoire, et nous nous engageons à offrir des produits de qualité supérieure à nos clients.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Boutiques -->
+    <section id="boutiques" class="py-24 bg-gray-900 text-gray-100">
+        <div class="text-center text-yellow-400 mb-12">
+            <h2 class="text-4xl font-semibold">Nos Boutiques</h2>
+            <p class="text-xl max-w-2xl mx-auto ">Explorez nos différentes boutiques, chacune offrant une sélection unique d'alcools rares et raffinés.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 max-w-7xl mx-auto px-6">
+            <!-- Boutique 1 -->
+            <div class="bg-white text-gray-800 p-8 rounded-lg shadow-xl transform hover:scale-105 hover:shadow-2xl hover:bg-yellow-50 transition-all duration-300" onclick="openModal('modalParis')" aria-label="Voir les détails de La Cave de Paris">
+                <div class="flex flex-col items-center">
+                    <img src="paris_boutique.jpg" alt="La Cave de Paris" class="w-32 h-32 mb-6 object-cover rounded-full border-4 border-yellow-600" loading="lazy">
+                    <h3 class="text-2xl font-semibold text-yellow-600 mb-4">La Cave de Paris</h3>
+                    <p class="text-lg mb-4">Une sélection de vins et spiritueux raffinés, en plein cœur de la capitale.</p>
+                    <a href="#contact" class="bg-yellow-600 text-black py-2 px-6 rounded-full font-semibold hover:bg-yellow-500 transition duration-200">Nous Contacter</a>
+                </div>
+            </div>
+
+            <!-- Modal La Cave de Paris -->
+            <div id="modalParis" class="modal fixed inset-0 hidden z-50 flex justify-center items-center bg-black bg-opacity-70">
+                <div class="bg-white p-8 rounded-lg shadow-xl w-3/4 sm:w-1/2">
+                    <h2 class="text-3xl font-semibold text-yellow-600 mb-4">La Cave de Paris - Détails</h2>
+                    <p class="text-lg mb-4">Une sélection exclusive de vins fins et spiritueux rares.</p>
+                    <ul class="list-disc pl-5 mb-6 text-black">
+                        <li>Vins rouges de Bordeaux</li>
+                        <li>Whisky écossais vieilli</li>
+                        <li>Rhum des Caraïbes</li>
+                        <li>Bières artisanales locales</li>
+                    </ul>
+                    <button class="bg-red-600 text-white py-2 px-6 rounded-full" onclick="closeModal('modalParis')">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="py-24 bg-cover bg-center relative" style="background-image: url('CUISINE.jpg');">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center text-white">
+            <h2 class="text-4xl font-semibold text-yellow-400 mb-6">Contactez-Nous</h2>
+            <p class="text-xl mb-12">Nous sommes à votre disposition pour toute question ou recommandation.</p>
+            <div class="flex flex-col md:flex-row gap-16">
+                <!-- Formulaire de contact -->
+                <div class="md:w-1/2 bg-yellow-800 p-8 rounded-lg shadow-lg">
+                    <form action="enregistre.php" method="post" class="space-y-6">
+                        <h3 class="text-xl font-semibold text-yellow-400 italic">Envoyer un Message</h3>
+                        <div>
+                            <label for="nom" class="block text-white">Nom :</label>
+                            <input type="text" name="nom" id="nom" class="w-full px-4 py-2 border bg-yellow-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Nom" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-white">Email :</label>
+                            <input type="email" name="email" id="email" class="w-full px-4 py-2 border bg-yellow-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Email" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-white">Message :</label>
+                            <textarea name="message" id="message" class="w-full px-4 py-2 border bg-yellow-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Message" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 bg-yellow-600 hover:bg-yellow-500 text-black font-semibold rounded-lg">Envoyer</button>
+                    </form>
+                </div>
+
+                <!-- Formulaire de Livraison -->
+                <div class="md:w-1/2 text-white">
+                    <h3 class="text-2xl font-semibold text-yellow-400 mb-6">Livraison à Domicile</h3>
+                    <form class="space-y-6" id="livraison-form">
+                        <div>
+                            <label for="livraison-adresse" class="block">Adresse de livraison :</label>
+                            <input type="text" id="livraison-adresse" class="w-full px-4 py-2 border bg-yellow-900 rounded-lg" placeholder="Entrez votre adresse ou utilisez votre localisation" required>
+                        </div>
+                        <div class="flex justify-between">
+                            <button type="button" id="btn-localiser" class="bg-yellow-600 hover:bg-yellow-500 px-6 py-3 rounded-lg">Utiliser la localisation</button>
+                            <button type="submit" class="bg-yellow-600 hover:bg-yellow-500 px-6 py-3 rounded-lg">Commander</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-6">
+        <div class="text-center">
+            <p>&copy; 2024 La Cave à Alcool | Tous droits réservés</p>
+            <p><a href="#accueil" class="text-yellow-300 hover:text-yellow-100" aria-label="Retour à l'accueil">Retour à l'Accueil</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+        }
+
+        // Fonction pour récupérer la localisation de l'utilisateur
+        document.getElementById('btn-localiser').addEventListener('click', function() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    document.getElementById('livraison-adresse').value = `Latitude: ${lat}, Longitude: ${lon}`;
+                });
+            } else {
+                alert("La géolocalisation n'est pas supportée par votre navigateur.");
+            }
+        });
+    </script>
+</body>
+
+</html>
